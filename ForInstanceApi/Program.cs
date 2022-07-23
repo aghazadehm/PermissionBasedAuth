@@ -49,6 +49,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 builder.Services.AddDbContextFactory<PermissionsDbContext>(options =>
     options.UseSqlServer(connectionString), ServiceLifetime.Singleton);
 builder.Services.AddSingleton<IPermissionsRepository, PermissionsRepository>();
+
+// Write Permissions in db
 builder.Services.AddHostedService<PermissionsHost>();
 builder.Services.Configure<PermissionConfig>(builder.Configuration.GetSection(PermissionConfig.ConfigName));
 
