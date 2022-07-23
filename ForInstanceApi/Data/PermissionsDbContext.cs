@@ -1,5 +1,6 @@
 ﻿using InsuranceApi.Models.Access;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InsuranceApi.Data
 {

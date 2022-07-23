@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InsuranceApi.Models.Access
 {
+    [Table("ApiPermissions", Schema = "Identity")]
+
     public class ApiPermission
     {
         public Guid Id { get; set; }
